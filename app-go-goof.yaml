@@ -37,7 +37,7 @@ spec:
       serviceAccountName: go-goof-ksa
       containers:
         - name: go-goof
-          image: us-west1-docker.pkg.dev/snyk-cx-se-demo/demo/go-goof:app
+          image: us-west1-docker.pkg.dev/snyk-cx-se-demo/demo/go-goof:latest
           imagePullPolicy: IfNotPresent
           securityContext:
             allowPrivilegeEscalation: false
