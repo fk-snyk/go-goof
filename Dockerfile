@@ -12,6 +12,10 @@ RUN go build -o main .
 
 # Use a smaller, production-ready image for the final image
 FROM alpine:latest
+LABEL maintainer="Moi" \
+    org.opencontainers.image.source="https://github.com/fk-snyk/go-goof" \
+    org.opencontainers.image.revision=$VCS_REF \
+    org.opencontainers.image.created=$BUILD_DATE
 
 # Copy the built binary from the builder stage
 COPY --from=builder /app/main /app/main
