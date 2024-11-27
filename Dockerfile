@@ -16,6 +16,7 @@ LABEL maintainer="Moi" \
     org.opencontainers.image.source="https://github.com/fk-snyk/go-goof" \
     org.opencontainers.image.revision=$VCS_REF \
     org.opencontainers.image.created=$BUILD_DATE
+LABEL io.snyk.containers.image.dockerfile="/Dockerfile"
 
 # Copy the built binary from the builder stage
 COPY --from=builder /app/main /app/main
